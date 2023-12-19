@@ -4,10 +4,11 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class FrozenDrink2 {
+    static int n,m;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int m = sc.nextInt();
+         n = sc.nextInt();
+         m = sc.nextInt();
         int[][] iceFrame = new int[n][m];
         sc.nextLine();
         for (int i = 0; i <n ; i++) {
