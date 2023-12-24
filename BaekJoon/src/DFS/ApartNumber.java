@@ -1,4 +1,4 @@
-package BFS;
+package DFS;
 //silver1 2667
 import java.util.ArrayList;
 import java.util.Arrays;
