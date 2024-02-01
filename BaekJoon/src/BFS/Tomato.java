@@ -1,5 +1,6 @@
 package BFS;
 
+import BFS.node.Node2;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -30,11 +31,11 @@ public class Tomato {
                     .toArray();
         }
 
-        Queue<Node> q = new LinkedList<>();
+        Queue<Node2> q = new LinkedList<>();
         for (int i = 0; i <n ; i++) {
             for (int j = 0; j <m ; j++) {
                 if (tomatoes[i][j] == 1) {
-                    q.offer(new Node(i,j)); // 익은 토마토 좌표 먼저 큐에 저장
+                    q.offer(new Node2(i,j)); // 익은 토마토 좌표 먼저 큐에 저장
                 }
             }
         }
@@ -60,10 +61,10 @@ public class Tomato {
         System.out.println(res==0 ? 0 : res-1);
     }
 
-    private static int bfs(Queue<Node> q) {
+    private static int bfs(Queue<Node2> q) {
         int result = 0;
         while (!q.isEmpty()) {
-            Node node = q.poll();
+            Node2 node = q.poll();
             int x = node.getX();
             int y = node.getY();
             for (int i = 0; i < 4; i++) {
@@ -76,7 +77,7 @@ public class Tomato {
                     continue;
                 }
                 if (tomatoes[nx][ny] == 0) { //안익은 토마토
-                    q.offer(new Node(nx,ny));
+                    q.offer(new Node2(nx,ny));
                     tomatoes[nx][ny] = tomatoes[x][y]+1;
                     //System.out.printf("%d %d %d\n",nx,ny,tomatoes[nx][ny]);
                     result = tomatoes[nx][ny];

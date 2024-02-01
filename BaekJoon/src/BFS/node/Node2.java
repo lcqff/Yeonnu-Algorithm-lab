@@ -1,10 +1,10 @@
-package BFS;
+package BFS.node;
 
-class Node {
+public class Node2 {
     int x;
     int y;
 
-    public Node(int x, int y) {
+    public Node2(int x, int y) {
         this.x = x;
         this.y = y;
     }

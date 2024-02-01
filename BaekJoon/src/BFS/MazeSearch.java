@@ -1,6 +1,7 @@
 package BFS;
 //silver 1
 
+import BFS.node.Node2;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -27,10 +28,10 @@ public class MazeSearch {
     }
 
     private static int BFS(int[][] maze, int x, int y) {
-        Queue<Node> q = new LinkedList<>();
-        q.offer(new Node(x, y));
+        Queue<Node2> q = new LinkedList<>();
+        q.offer(new Node2(x, y));
         while (!q.isEmpty()) {
-            Node node = q.poll();
+            Node2 node = q.poll();
             x = node.getX();
             y = node.getY();
             for (int i = 0; i < 4; i++) {
@@ -44,7 +45,7 @@ public class MazeSearch {
                 }
                 if (maze[nx][ny] == 1) {
                     maze[nx][ny] = maze[x][y] + 1;
-                    q.offer(new Node(nx, ny));
+                    q.offer(new Node2(nx, ny));
                 }
             }
         }
