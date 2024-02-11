@@ -2,6 +2,7 @@ package chpapter9_shorestPath;
 
 import java.util.Arrays;
 import java.util.Scanner;
+//플로이드 워셜 최단 경로 알고리즘
 
 //5 7
 //1 2
@@ -43,7 +44,7 @@ public class FutureCity {
                 if (i == step) {
                     continue;
                 }
-                for (int j = 0; j < N/2; j++) {
+                for (int j = 0; j < N / 2; j++) {
                     lines[i][j] = Math.min(lines[i][j], lines[i][step] + lines[step][j]);
                     lines[j][i] = lines[i][j];
                 }
