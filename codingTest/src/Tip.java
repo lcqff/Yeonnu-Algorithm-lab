@@ -44,4 +44,9 @@ public class Tip {
         int sum=IntStream.of(intArr).sum();
 
     }
+
+    //배열 초기화
+    private void initArray() {
+        Arrays.fill(intArr, (int) Math.exp(9));
+    }
 }
