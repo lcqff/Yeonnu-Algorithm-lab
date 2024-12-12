@@ -1,4 +1,4 @@
-package Try;
+package Implementation.BaekJoon;
 
 import java.util.*;
 
