@@ -1,4 +1,4 @@
-package Algorithm.twoPointer;
+package Algorithm.sliding_window;
 
 import java.io.*;
 import java.util.*;
